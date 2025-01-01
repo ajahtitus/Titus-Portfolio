@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajah Titus Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+<div class="navbar">
+  <div class="logo">
+    <img src="image/logo.png" alt="Logo" />
+  </div>
+  <div class="navbar-links" id="navbarLinks">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </div>
+  <div class="menu-icon" id="menuIcon">☰</div>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </div>
+</div>
+
+<!-- Dark mode toggle button -->
+<div class="darkmode-switch" id="darkmodeSwitch">
+  <label for="darkmode-toggle">🌙</label>
+  <input type="checkbox" id="darkmode-toggle">
+</div>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="text-section">
+      <div class="greeting" id="greeting">
+          <p>Hi there! 👋</p>
+          <button id="dismissGreeting">Dismiss</button>
+        </div>
+        
+        <div class="header">HI!</div>
+        <div class="name">
+          <span class="name-prefix">MY NAME IS </span>
+          <span class="name-main">AJAH TITUS</span>
+        </div>
+        <div class="description">
+          A JavaScript developer with a focus on both frontend and backend
+          development for websites, and I find great enjoyment in building and
+          coding web applications.
+        </div>
+        <div class="socials">
+          <a href="https://github.com/ajahtitus/" target="_blank">
+            <img src="icon/icons8-github.svg" alt="GitHub" width="24" height="24">
+          </a>
+          <a href="https://www.facebook.com/titus.ajah.108" target="_blank">
+            <img src="icon/facebook-svgrepo-com.svg" alt="Facebook" width="24" height="24">
+          </a>
+          <a href="https://x.com/AjahTitus2" target="_blank">
+            <img src="icon/icons8-x.svg" alt="Twitter" width="24" height="24">
+          </a>
+          <a href="https://www.linkedin.com/in/ajah-titus-836078255/" target="_blank">
+            <img src="icon/linkedin-svgrepo-com.svg" alt="LinkedIn" width="24" height="24">
+          </a>
+          <a href="#" target="_blank">
+            <img src="icon/profile-svgrepo-com.svg" alt="Resume" width="24" height="24">
+          </a>
+        </div>        
+        
+      </div>
+      <div class="emoji">
+        <img src="image/avatar-image.png" alt="Avatar" />
+      </div>
+    </div>
+    <div
+      class="about-me-container"
+      style="
+        display: flex;
+        gap: 50px;
+        margin-top: 40px;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+      "
+    >
+      <!-- Image Section -->
+      <div class="about-image" style="flex: 1; text-align: center">
+        <img
+          src="image/about-image.jpeg"
+          alt="About Image"
+          style="width: 100%; max-width: 300px; border-radius: 10px"
+        />
+        <!-- My Skills -->
+      </div>
+
+      <!-- About Me Section -->
+      <div id="about" class="about-me-text" style="flex: 2; text-align: left">
+        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 20px">
+          About Me
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; max-width: 700px">
+          I am a passionate JavaScript software developer based in Port
+          Harcourt, Nigeria, with strong expertise in PHP, jQuery, Bootstrap,
+          HTML, and CSS. I enjoy building web applications and am always eager
+          to learn new technologies. I have excellent communication skills,
+          which enables me to effectively communicate with people from diverse
+          backgrounds. I'm open to job opportunities where I can contribute my
+          skills, learn, and grow. If you have an opportunity that aligns with
+          my experience, feel free to reach out! <br />
+          <br />
+          I’m currently learning...
+        </p>
+        <span class="font-bold text-primaryBlue">ReactJs and NodeJs</span>
+      </div>
+    </div>
+    <div class="skills-section">
+      <h3>My skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
+            alt="HTML"
+          />
+          <span>HTML</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/732/732190.png"
+            alt="CSS"
+          />
+          <span>CSS</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+            alt="JavaScript"
+          />
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png"
+            alt="Bootstrap"
+          />
+          <span>Bootstrap</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968617.png"
+            alt="Tailwind CSS"
+          />
+          <span>Tailwind</span>
+        </div>
+        <div class="skill-card">
+          <img src="icon/git.svg" alt="Git" />
+          <span>Git</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+            alt="GitHub"
+          />
+          <span>GitHub</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/919/919851.png"
+            alt="VSCode"
+          />
+          <span>VsCode</span>
+        </div>
+        <div class="skill-card">
+          <img src="icon/wordpress.svg" alt="Wordpress" />
+          <span>Wordpress</span>
+        </div>
+        <div class="skill-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968753.png"
+            alt="Wix"
+          />
+          <span>Wix</span>
+        </div>
+        <div class="skill-card">
+          <img src="icon/laravel.svg" alt="Laravel" />
+          <span>Laravel</span>
+        </div>
+      </div>
+    </div>
+    <!-- Projects Section -->
+<div id="projects" class="projects-section">
+  <h3>Projects</h3>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="image/project1.png" alt="YurilyteCorps" class="project-image" />
+      <div class="project-content">
+        <h4 class="project-title">YurilyteCorps</h4>
+        <p class="project-description">
+          This is a simple website built to highlight services that help
+          VTubers connect with resources and grow their virtual talent.
+        </p>
+        <div class="project-tags">Javascript | Wix | Velo</div>
+        <a class="project-link" href="https://www.yurilytecorp.org/" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="image/project6.jpg" alt="Odek Partner" class="project-image" />
+      <div class="project-content">
+        <h4 class="project-title">Odek Partner</h4>
+        <p class="project-description">
+          This website showcases Odek Partner's travel offerings, featuring
+          seamless navigation, detailed tours, inviting designs, and easy
+          client connections.
+        </p>
+        <div class="project-tags">Javascript | Php | Laravel</div>
+        <a class="project-link" href="https://www.odekpartner.com" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="image/project2.png" alt="Kristin Slaby" class="project-image" />
+      <div class="project-content">
+        <h4 class="project-title">Kristin Slaby</h4>
+        <p class="project-description">
+          This website showcases the work of Kristin Slaby, a talented New
+          York-based photographer, featuring a beautifully designed gallery
+          and contact information to connect with clients.
+        </p>
+        <div class="project-tags">Javascript | Wix</div>
+        <a class="project-link" href="https://www.kristinslaby.photography" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <img src="image/project3.png" alt="Stem Learning" class="project-image" />
+      <div class="project-content">
+        <h4 class="project-title">Stem Learning</h4>
+        <p class="project-description">
+          An eLearning platform for coding, providing interactive lessons
+          and hands-on projects to help learners master programming skills.
+        </p>
+        <div class="project-tags">Php | Mysql | Javascript</div>
+        <a class="project-link" href="https://meenahcode.com/" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+      <img src="image/project4.png" alt="Courier Website" class="project-image" />
+      <div class="project-content">
+        <h4 class="project-title">Courier Website</h4>
+        <p class="project-description">
+          A courier service offering fast, secure, and reliable deliveries
+          with real-time tracking for your peace of mind.
+        </p>
+        <div class="project-tags">JavaScript | Php | Mysql</div>
+        <a class="project-link" href="https://vaultwayexpress.com/" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card">
+      <img src="image/project5.png" alt="Finance Tracker" class="project-image" />
+      <div class="project-content">
+        <h4 class="project-title">Finance Tracker</h4>
+        <p class="project-description">
+          A financial management tool that helps you budget, save, and track
+          expenses effectively.
+        </p>
+        <div class="project-tags">Javascript | Css</div>
+        <a class="project-link" href="#" target="_blank">View Project ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    <section class="client-reviews">
+      <h2 class="reviews-title">Client Reviews</h2>
+      <div class="reviews-container">
+        <div class="review-card">
+          <img src="image/client1.jpeg" alt="Client 1" class="client-image" onclick="openModal(this)">
+          <div class="review-content">
+            <h3 class="client-name">Kristin Slaby</h3>
+            <p class="review-text">"This is an amazing service! The team was professional, responsive, and delivered high-quality results. I highly recommend them!"</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="image/client2.jpeg" alt="Client 2" class="client-image" onclick="openModal(this)">
+          <div class="review-content">
+            <h3 class="client-name">Kristin Slaby</h3>
+            <p class="review-text">"I had an excellent experience working with this team. They exceeded my expectations and went above and beyond. Truly remarkable!"</p>
+          </div>
+        </div>
+        <div id="imageModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="modalImage">
+        </div>
+      </div>
+    </section>
+    
+    <footer class="footer-container">
+      <div class="footer-text">
+        © Ajah Titus 2025.
+      </div>
+    </footer>    
+  </body>
+    <script src="script.js"></script>
+  <script>
+    // Get the checkbox input and dark mode switch container
+    const darkModeToggle = document.getElementById('darkmode-toggle');
+    const darkModeSwitch = document.getElementById('darkmodeSwitch');
+  
+    // Check if dark mode was previously enabled
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      darkModeToggle.checked = true; // Keep the checkbox checked
+    }
+  
+    // Toggle dark mode on checkbox change
+    darkModeToggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
+  
+
+  <script>
+    const menuIcon = document.getElementById("menuIcon");
+    const dropdownMenu = document.getElementById("dropdownMenu");
+  
+    menuIcon.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("active");
+    });
+
+    window.addEventListener("click", (event) => {
+      if (event.target !== menuIcon && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove("active");
+      }
+    });
+  </script>
+  <script>
+    const greetingElement = document.getElementById('greeting');
+    const dismissButton = document.getElementById('dismissGreeting');
+    
+
+    function getGreeting() {
+      const hour = new Date().getHours();
+      let greeting = "";
+    
+      if (hour >= 5 && hour < 12) {
+        greeting = "Good Morning!";
+      } else if (hour >= 12 && hour < 18) {
+        greeting = "Good Afternoon!";
+      } else {
+        greeting = "Good Evening!";
+      }
+    
+      greetingElement.querySelector('p').textContent = greeting + " 👋";
+    }
+    
+    getGreeting();
+    
+    setTimeout(() => {
+      greetingElement.style.display = 'none';
+    }, 5000);
+    
+    dismissButton.addEventListener('click', () => {
+      greetingElement.style.display = 'none';
+    });    
+  </script>
+  
+</html>

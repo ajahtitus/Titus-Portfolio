@@ -1,7 +1,11 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+<<<<<<< HEAD
   background: linear-gradient(to right, #dcd8fb, #fbe4e6);
+=======
+  background-color: #fff;
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
   color: #373737;
   overflow-x: hidden;
 }
@@ -13,6 +17,7 @@ html {
   scroll-margin-top: 70px;
 }
 
+<<<<<<< HEAD
 .social-icons-container {
   display: flex;
   justify-content: center;
@@ -36,6 +41,8 @@ html {
   opacity: 0.7; /* Add hover effect */
 }
 
+=======
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
 .navbar {
   display: flex;
   justify-content: center; /* Center content horizontally */
@@ -86,7 +93,10 @@ html {
   }
 }
 
+<<<<<<< HEAD
 /* General body styling for dark mode */
+=======
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
 body.dark-mode {
   background: radial-gradient(
     circle at center,
@@ -102,6 +112,7 @@ body.dark-mode .name-prefix {
   color: #ffffff;
 }
 
+<<<<<<< HEAD
 /* Dark mode styles for navbar links */
 body.darkmode .navbar-links a {
   color: #ffffff; /* Set default text color in dark mode */
@@ -265,6 +276,8 @@ body.dark-mode .review-card:hover {
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
+=======
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
 .navbar-links {
   display: flex;
   gap: 20px;
@@ -557,6 +570,22 @@ h3 {
   transition: background-color 0.3s, color 0.3s;
 }
 
+<<<<<<< HEAD
+=======
+body.dark-mode .projects-section {
+  background-color: #1a1a1a; /* Dark mode background */
+  color: #ffffff; /* Dark mode text color for the section */
+}
+
+body.dark-mode .projects-section h3,
+body.dark-mode .projects-section p,
+body.dark-mode .projects-section .project-title,
+body.dark-mode .projects-section .project-description,
+body.dark-mode .projects-section .project-tags {
+  color: #ffffff; /* Ensure all text inside the section is white */
+}
+
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
 .projects-section h3 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -624,6 +653,26 @@ h3 {
 .project-link:hover {
   color: #ffffff;
 }
+<<<<<<< HEAD
+=======
+body.dark-mode .projects-section {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .project-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .project-tags {
+  color: #b0b0b0;
+}
+
+body.dark-mode .project-link {
+  color: #4e9fff;
+}
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
 
 @media (max-width: 768px) {
   .projects-grid {
@@ -757,6 +806,7 @@ h3 {
 #greeting button:hover {
   background-color: #e03e1d;
 }
+<<<<<<< HEAD
 /* Container for the entire section */
 .cta-section {
   display: flex;
@@ -1103,4 +1153,18 @@ body.darkmode #darkmode-icon {
 /* Add transition effect to the icon for smooth change */
 #darkmode-toggle:checked + label {
   transition: all 0.3s ease;
+=======
+
+body.dark-mode #greeting {
+  color: #fff;
+  background-color: #333;
+}
+
+body.dark-mode #greeting button {
+  background-color: #00bcd4;
+}
+
+body.dark-mode #greeting button:hover {
+  background-color: #00a3b4;
+>>>>>>> 4521f7ee63d74a1dbbb994967d216f952c2faa8b
 }

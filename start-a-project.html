@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start a Project</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #0f0e17, #3a3a55);
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      .startproject-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #1a1a2e;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #fff;
+      }
+
+      h1 span {
+        color: #c0a9ff;
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+        color: #b0b0b0;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: #252539;
+        color: #fff;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #888;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #ff4b5c;
+        outline: none;
+        background-color: #29293e;
+      }
+
+      .btn {
+        background-color: #ff4b5c;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 20px;
+        align-self: flex-end;
+        transition: background 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #ff6b7d;
+      }
+
+      .step {
+        display: none;
+      }
+
+      .step.active {
+        display: block;
+      }
+
+      .step-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .step-navigation button {
+        background-color: #3a3a55;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .step-navigation button:hover {
+        background-color: #ff6b7d;
+      }
+      /* Make sure the form groups are aligned properly */
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      /* Style the textarea for consistent appearance */
+      textarea {
+        width: 100%; /* Ensure the textarea stretches to the full width of the container */
+        padding: 8px; /* Add padding to match input fields */
+        border-radius: 4px; /* Keep the same border radius as other inputs */
+        border: 1px solid #ccc; /* Similar border style */
+        box-sizing: border-box; /* Ensure padding is included in the width calculation */
+        font-size: 14px; /* Match the font size of input fields */
+      }
+
+      select {
+        width: 100%; /* Ensure the dropdown also stretches to the full width */
+        padding: 8px; /* Add padding to match input fields */
+        border-radius: 4px; /* Consistent border radius */
+        border: 1px solid #ccc; /* Same border style as inputs */
+        font-size: 14px; /* Match the font size */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="navbar-links" id="navbarLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Project</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="consult-me.html">Consult Me</a>
+        <a href="start-a-project.html">Start A Project</a>
+      </div>
+      <div class="menu-icon" id="menuIcon">☰</div>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="/index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Project</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="start-a-project.html">Start A Project</a>
+      </div>
+    </div>
+    <div class="startproject-container">
+      <h1>
+        Don’t Settle for Mediocrity. <br />
+        <span> Let's build stuff that actually work!</span>
+      </h1>
+      <p>
+        I boast a prolific project execution style that drives real business
+        impact. While others deliver ready-made templates and excuses, I create
+        custom solutions that generate measurable returns for corporate clients
+        and ambitious individuals. Ready to own a project that performs? Fill
+        out the form below.
+      </p>
+
+      <form
+        id="startprojectForm"
+        action="https://formspree.io/f/meoovlly"
+        method="POST"
+      >
+        <!-- Step 1 -->
+        <div id="step-1" class="step active">
+          <div class="form-group">
+            <label for="name">What is Your Name? *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your first name would do just fine."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+              <option value="">Select Your Region</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bosnia and Herzegovina">
+                Bosnia and Herzegovina
+              </option>
+              <option value="Botswana">Botswana</option>
+              <option value="Brazil">Brazil</option>
+              <option value="Brunei">Brunei</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cabo Verde">Cabo Verde</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Central African Republic">
+                Central African Republic
+              </option>
+              <option value="Chad">Chad</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo (Congo-Brazzaville)">
+                Congo (Congo-Brazzaville)
+              </option>
+              <option value="Congo (Democratic Republic)">
+                Congo (Democratic Republic)
+              </option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czechia (Czech Republic)">
+                Czechia (Czech Republic)
+              </option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Eswatini">Eswatini</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Greece">Greece</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guinea-Bissau">Guinea-Bissau</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="India">India</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="Iran">Iran</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea (North)">Korea (North)</option>
+              <option value="Korea (South)">Korea (South)</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Laos">Laos</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libya">Libya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Micronesia">Micronesia</option>
+              <option value="Moldova">Moldova</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montenegro">Montenegro</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Namibia">Namibia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherlands">Netherlands</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="North Macedonia">North Macedonia</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau">Palau</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Philippines">Philippines</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Romania">Romania</option>
+              <option value="Russia">Russia</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="Saint Kitts and Nevis">
+                Saint Kitts and Nevis
+              </option>
+              <option value="Saint Lucia">Saint Lucia</option>
+              <option value="Saint Vincent and the Grenadines">
+                Saint Vincent and the Grenadines
+              </option>
+              <option value="Samoa">Samoa</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome and Principe">
+                Sao Tome and Principe
+              </option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Serbia">Serbia</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="South Sudan">South Sudan</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syria">Syria</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania">Tanzania</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Timor-Leste">Timor-Leste</option>
+              <option value="Togo">Togo</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Emirates">United Arab Emirates</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="United States">United States</option>
+              <option value="Uruguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Vatican City">Vatican City</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email">What is Your Email? *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your best email address."
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">What is Your Phone Number? *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Your phone number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="communication"
+              >What's your preferred method of communication?</label
+            >
+            <select id="communication" name="communication" required>
+              <option value="">
+                Select Your Preferred Method of Communication
+              </option>
+              <option value="Whatsapp">Whatsapp</option>
+              <option value="Email">Email</option>
+              <option value="Google Meet">Google Meet</option>
+              <option value="Zoom">Zoom</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="techsavvy">Do you consider yourself tech-savvy?</label>
+            <select id="techsavvy" name="techsavvy" required>
+              <option value="">Select an option</option>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+              <option value="To an extent">To an extent</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div id="step-2" class="step">
+          <div class="form-group">
+            <label for="typeproject">Type of Project</label>
+            <select id="typeproject" name="typeproject" required>
+              <option value="">Select an option</option>
+              <option value="Website Design and Development">
+                Website Design and Development
+              </option>
+              <option value="Website Revamp">Website Revamp</option>
+              <option value="Secure Website Migration">
+                Secure Website Migration
+              </option>
+              <option value="360° Website Audit">360° Website Audit</option>
+              <option value="Troubleshoot & Fix Errors/Bug">
+                Troubleshoot & Fix Errors/Bug
+              </option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="businessName">Name of Business or Product</label>
+            <input
+              type="text"
+              id="businessName"
+              name="businessName"
+              placeholder="No Hitch Media"
+              required
+            />
+            <small class="form-text text-muted"
+              >Enter the business or product name you want to design a website
+              for.</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="projectfor">Who is this project for?</label>
+            <select id="projectfor" name="projectfor" required>
+              <option value="">Select an option</option>
+              <option value="Myself (Personal)">Myself (Personal)</option>
+              <option value="A product or business that I own or co-own">
+                A product or business that I own or co-own
+              </option>
+              <option value="A product or business belonging to someone else">
+                A product or business belonging to someone else
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div id="step-3" class="step">
+          <div class="form-group">
+            <label for="knowof">
+              Is there anything else you want to let me know of? **
+            </label>
+            <select
+              id="knowof"
+              name="knowof"
+              required
+              onchange="toggleMessageField()"
+            >
+              <option value="">Select Option</option>
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="messageContainer" style="display: none">
+            <label for="message">Please type it in here</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Please be clear as much as you can"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="step-navigation">
+          <button type="button" id="prevBtn" onclick="changeStep(-1)">
+            Previous
+          </button>
+          <button type="button" id="nextBtn" onclick="changeStep(1)">
+            Next
+          </button>
+        </div>
+
+        <button type="submit" class="btn" id="submitBtn" style="display: none">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script>
+      let currentStep = 1;
+      const totalSteps = 3;
+
+      function changeStep(step) {
+        const currentStepElement = document.getElementById(
+          `step-${currentStep}`
+        );
+
+        // Perform validation for required fields in the current step
+        if (step === 1) {
+          const requiredFields =
+            currentStepElement.querySelectorAll("[required]");
+          let allFieldsValid = true;
+
+          requiredFields.forEach((field) => {
+            if (!field.value.trim()) {
+              allFieldsValid = false;
+              field.style.borderColor = "red"; // Highlight invalid field
+            } else {
+              field.style.borderColor = ""; // Reset border for valid field
+            }
+          });
+
+          if (!allFieldsValid) {
+            alert("Please fill all required fields before proceeding.");
+            return; // Stop moving to the next step
+          }
+        }
+
+        // Update step visibility
+        currentStepElement.classList.remove("active");
+        currentStep += step;
+
+        if (currentStep > totalSteps) {
+          document.getElementById("startprojectForm").submit();
+        } else {
+          const nextStepElement = document.getElementById(
+            `step-${currentStep}`
+          );
+          nextStepElement.classList.add("active");
+        }
+
+        // Manage button visibility
+        if (currentStep === totalSteps) {
+          document.getElementById("nextBtn").style.display = "none";
+          document.getElementById("submitBtn").style.display = "block";
+        } else {
+          document.getElementById("nextBtn").style.display = "block";
+          document.getElementById("submitBtn").style.display = "none";
+        }
+
+        if (currentStep === 1) {
+          document.getElementById("prevBtn").style.display = "none";
+        } else {
+          document.getElementById("prevBtn").style.display = "block";
+        }
+      }
+    </script>
+    <script>
+      function toggleMessageField() {
+        const knowOf = document.getElementById("knowof").value;
+        const messageContainer = document.getElementById("messageContainer");
+
+        if (knowOf === "Yes") {
+          messageContainer.style.display = "block"; // Show the textarea
+        } else {
+          messageContainer.style.display = "none"; // Hide the textarea
+        }
+      }
+    </script>
+
+    <script>
+      const menuIcon = document.getElementById("menuIcon");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      menuIcon.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("active");
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target !== menuIcon && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

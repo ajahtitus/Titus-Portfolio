@@ -146,6 +146,7 @@
         <a href="index.html#about">About</a>
         <a href="index.html#projects">Project</a>
         <a href="index.html#testimonials">Testimonials</a>
+        <a href="consult-me.html">Consult Me</a>
         <a href="start-a-project.html">Start A Project</a>
       </div>
     </div>
@@ -516,6 +517,20 @@
           document.getElementById("prevBtn").style.display = "block";
         }
       }
+    </script>
+    <script>
+      const menuIcon = document.getElementById("menuIcon");
+      const dropdownMenu = document.getElementById("dropdownMenu");
+
+      menuIcon.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("active");
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target !== menuIcon && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.remove("active");
+        }
+      });
     </script>
   </body>
 </html>

@@ -21,10 +21,13 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   </head>
   <body>
+    <div id="canvas-container">
+      <canvas id="snowCanvas"></canvas>
+    </div>    
     <!-- Navbar -->
     <div class="navbar">
       <div class="navbar-links" id="navbarLinks">
-        <a href="/">Home</a>
+        <a href="index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#projects">Project</a>
         <a href="index.html#testimonials">Testimonials</a>
@@ -33,7 +36,7 @@
       </div>
       <div class="menu-icon" id="menuIcon">☰</div>
       <div class="dropdown-menu" id="dropdownMenu">
-        <a href="/">Home</a>
+        <a href="/index.html">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#projects">Project</a>
         <a href="index.html#testimonials">Testimonials</a>
@@ -55,76 +58,80 @@
           <button id="dismissGreeting">Dismiss</button>
         </div>
 
-        <div class="header" data-aos="fade-down">HI!</div>
-        <div class="name" data-aos="fade-up" data-aos-delay="200">
-          <span class="name-prefix">MY NAME IS </span>
-          <span class="name-main">AJAH TITUS</span>
-        </div>
-        <div class="description" data-aos="fade-up" data-aos-delay="400">
-          A Full-Stack developer with a focus on both frontend and backend
-          development for websites, and I find great enjoyment in building and
-          coding web applications.
-        </div>
+        <div class="dark-section">
+          <div class="header" data-aos="fade-down">HI!</div>
+          <div class="name" data-aos="fade-up" data-aos-delay="200">
+            <span class="name-prefix">MY NAME IS </span>
+            <span class="name-main">AJAH TITUS</span>
+          </div>
+          </div>
+          <div class="description" data-aos="fade-up" data-aos-delay="400">
+            A Full-Stack developer with a focus on both frontend and backend
+            development for websites, and I find great enjoyment in building and
+            coding web applications.
+          </div>
 
-        <div class="cta-section" data-aos="zoom-in" data-aos-delay="600">
-          <a href="#contact-title" class="primary-btn">Contact me here →</a>
-          <button
-  class="secondary-btn"
-  onclick="window.open('https://titus-dev.vercel.app//cv/Titus-CV-2025.pdf', '_blank')"
->
-  Download Resume
-  <img
-    src="icon/download.gif"
-    alt="Download Icon"
-    width="16"
-    height="16"
-  />
-</button>
+          <div class="cta-section" data-aos="zoom-in" data-aos-delay="600">
+            <a href="#contact-title" class="primary-btn">Contact me here →</a>
+            <button
+              class="secondary-btn"
+              onclick="window.open('https://titus-dev.vercel.app//cv/Ajah-Titus-CV.pdf', '_blank')"
+            >
+              Download Resume
+              <img
+                src="icon/download.gif"
+                alt="Download Icon"
+                width="16"
+                height="16"
+              />
+            </button>
 
-          <div class="social-icons" data-aos="fade-up" data-aos-delay="800">
-            <a
-              href="https://www.linkedin.com/in/ajah-titus-836078255/"
-              target="_blank"
-              class="social-icon"
-            >
-              <img
-                src="icon/linkedin-svgrepo-com.svg"
-                alt="LinkedIn"
-                width="24"
-                height="24"
-              />
-            </a>
-            <a
-              href="https://github.com/ajahtitus/"
-              target="_blank"
-              class="social-icon"
-            >
-              <img
-                src="icon/icons8-github.svg"
-                alt="GitHub"
-                width="24"
-                height="24"
-              />
-            </a>
-            <a
-              href="https://x.com/NoHitchCode"
-              target="_blank"
-              class="social-icon"
-            >
-              <img
-                src="icon/icons8-x.svg"
-                alt="Close Icon"
-                width="24"
-                height="24"
-              />
-            </a>
+            <div class="social-icons" data-aos="fade-up" data-aos-delay="800">
+              <a
+                href="https://www.linkedin.com/in/ajah-titus-836078255/"
+                target="_blank"
+                class="social-icon"
+              >
+                <img
+                  src="icon/linkedin-svgrepo-com.svg"
+                  alt="LinkedIn"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="https://github.com/ajahtitus/"
+                target="_blank"
+                class="social-icon"
+              >
+                <img
+                  src="icon/icons8-github.svg"
+                  alt="GitHub"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="https://x.com/NoHitchCode"
+                target="_blank"
+                class="social-icon"
+              >
+                <img
+                  src="icon/icons8-x.svg"
+                  alt="Close Icon"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="emoji" data-aos="flip-left" data-aos-delay="1000">
-        <img src="image/avatar-image.png" alt="Avatar" />
+        <div class="emoji" data-aos="flip-left" data-aos-delay="1000">
+          <img src="image/avatar-image.png" alt="Avatar" />
+        </div>
       </div>
     </div>
+
     <div
       class="about-me-container"
       style="
@@ -495,6 +502,80 @@
         dropdownMenu.classList.remove("active");
       }
     });
+  </script>
+  <script>
+    // Get the canvas and its context
+    const canvas = document.getElementById("snowCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Set canvas size to match the window
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Handle resize
+    window.addEventListener("resize", () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
+    // Snowflake properties
+    const snowflakes = [];
+    const maxSnowflakes = 150; // Adjust the number of snowflakes for density
+
+    class Snowflake {
+      constructor() {
+        this.x = Math.random() * canvas.width; // Random horizontal position
+        this.y = Math.random() * canvas.height; // Random vertical position
+        this.radius = Math.random() * 4 + 1; // Random size
+        this.speed = Math.random() * 3 + 1; // Fall speed
+        this.wind = Math.random() * 2 - 1; // Horizontal sway
+      }
+
+      update() {
+        this.y += this.speed;
+        this.x += this.wind;
+
+        // Reset snowflake when it falls out of view
+        if (this.y > canvas.height) {
+          this.y = -this.radius;
+          this.x = Math.random() * canvas.width;
+        }
+
+        // Reset position if it drifts too far horizontally
+        if (this.x > canvas.width || this.x < 0) {
+          this.x = Math.random() * canvas.width;
+          this.y = -this.radius;
+        }
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+        ctx.fill();
+      }
+    }
+
+    // Initialize snowflakes
+    function createSnowflakes() {
+      for (let i = 0; i < maxSnowflakes; i++) {
+        snowflakes.push(new Snowflake());
+      }
+    }
+
+    // Animate the snowflakes
+    function animateSnow() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+      snowflakes.forEach((snowflake) => {
+        snowflake.update();
+        snowflake.draw();
+      });
+      requestAnimationFrame(animateSnow); // Loop the animation
+    }
+
+    // Start the snow effect
+    createSnowflakes();
+    animateSnow();
   </script>
   <script>
     const greetingElement = document.getElementById("greeting");

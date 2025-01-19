@@ -598,15 +598,18 @@ document.getElementById("prevBtn").style.display = "none";
     </script>
     <script>
       function toggleMessageField() {
-        const knowOf = document.getElementById("knowof").value;
-        const messageContainer = document.getElementById("messageContainer");
+  const knowOf = document.getElementById("knowof").value;
+  const messageContainer = document.getElementById("messageContainer");
+  const messageField = document.getElementById("message");
 
-        if (knowOf === "Yes") {
-          messageContainer.style.display = "block"; // Show the textarea
-        } else {
-          messageContainer.style.display = "none"; // Hide the textarea
-        }
-      }
+  if (knowOf === "Yes") {
+    messageContainer.style.display = "block"; // Show the textarea
+    messageField.setAttribute("required", "true"); // Make it required
+  } else {
+    messageContainer.style.display = "none"; // Hide the textarea
+    messageField.removeAttribute("required"); // Remove the required attribute
+  }
+}
     </script>
 
     <script>

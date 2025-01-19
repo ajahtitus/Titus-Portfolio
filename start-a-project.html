@@ -557,62 +557,44 @@
 
     <script>
       let currentStep = 1;
-      const totalSteps = 3;
+const totalSteps = 3;
 
-      function changeStep(step) {
-        const currentStepElement = document.getElementById(
-          `step-${currentStep}`
-        );
+function changeStep(step) {
+  const currentStepElement = document.getElementById(
+    `step-${currentStep}`
+  );
+  currentStepElement.classList.remove("active");
 
-        // Perform validation for required fields in the current step
-        if (step === 1) {
-          const requiredFields =
-            currentStepElement.querySelectorAll("[required]");
-          let allFieldsValid = true;
+  currentStep += step;
 
-          requiredFields.forEach((field) => {
-            if (!field.value.trim()) {
-              allFieldsValid = false;
-              field.style.borderColor = "red"; // Highlight invalid field
-            } else {
-              field.style.borderColor = ""; // Reset border for valid field
-            }
-          });
+  if (currentStep > totalSteps) {
+    document.getElementById("consultForm").submit();
+  } else {
+    const nextStepElement = document.getElementById(
+      `step-${currentStep}`
+    );
+    nextStepElement.classList.add("active");
+  }
 
-          if (!allFieldsValid) {
-            alert("Please fill all required fields before proceeding.");
-            return; // Stop moving to the next step
-          }
-        }
+  // Handle "Next" button visibility
+  if (currentStep === totalSteps) {
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("submitBtn").style.display = "block";
+  } else {
+    document.getElementById("nextBtn").style.display = "block";
+    document.getElementById("submitBtn").style.display = "none";
+  }
 
-        // Update step visibility
-        currentStepElement.classList.remove("active");
-        currentStep += step;
+  // Handle "Previous" button visibility
+  if (currentStep === 1) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "block";
+  }
+}
 
-        if (currentStep > totalSteps) {
-          document.getElementById("startprojectForm").submit();
-        } else {
-          const nextStepElement = document.getElementById(
-            `step-${currentStep}`
-          );
-          nextStepElement.classList.add("active");
-        }
-
-        // Manage button visibility
-        if (currentStep === totalSteps) {
-          document.getElementById("nextBtn").style.display = "none";
-          document.getElementById("submitBtn").style.display = "block";
-        } else {
-          document.getElementById("nextBtn").style.display = "block";
-          document.getElementById("submitBtn").style.display = "none";
-        }
-
-        if (currentStep === 1) {
-          document.getElementById("prevBtn").style.display = "none";
-        } else {
-          document.getElementById("prevBtn").style.display = "block";
-        }
-      }
+// Initially hide the "Previous" button
+document.getElementById("prevBtn").style.display = "none";
     </script>
     <script>
       function toggleMessageField() {

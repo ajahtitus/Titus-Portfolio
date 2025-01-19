@@ -484,39 +484,44 @@
 
     <script>
       let currentStep = 1;
-      const totalSteps = 3;
+const totalSteps = 3;
 
-      function changeStep(step) {
-        const currentStepElement = document.getElementById(
-          `step-${currentStep}`
-        );
-        currentStepElement.classList.remove("active");
+function changeStep(step) {
+  const currentStepElement = document.getElementById(
+    `step-${currentStep}`
+  );
+  currentStepElement.classList.remove("active");
 
-        currentStep += step;
+  currentStep += step;
 
-        if (currentStep > totalSteps) {
-          document.getElementById("consultForm").submit();
-        } else {
-          const nextStepElement = document.getElementById(
-            `step-${currentStep}`
-          );
-          nextStepElement.classList.add("active");
-        }
+  if (currentStep > totalSteps) {
+    document.getElementById("consultForm").submit();
+  } else {
+    const nextStepElement = document.getElementById(
+      `step-${currentStep}`
+    );
+    nextStepElement.classList.add("active");
+  }
 
-        if (currentStep === totalSteps) {
-          document.getElementById("nextBtn").style.display = "none";
-          document.getElementById("submitBtn").style.display = "block";
-        } else {
-          document.getElementById("nextBtn").style.display = "block";
-          document.getElementById("submitBtn").style.display = "none";
-        }
+  // Handle "Next" button visibility
+  if (currentStep === totalSteps) {
+    document.getElementById("nextBtn").style.display = "none";
+    document.getElementById("submitBtn").style.display = "block";
+  } else {
+    document.getElementById("nextBtn").style.display = "block";
+    document.getElementById("submitBtn").style.display = "none";
+  }
 
-        if (currentStep === 1) {
-          document.getElementById("prevBtn").style.display = "none";
-        } else {
-          document.getElementById("prevBtn").style.display = "block";
-        }
-      }
+  // Handle "Previous" button visibility
+  if (currentStep === 1) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "block";
+  }
+}
+
+// Initially hide the "Previous" button
+document.getElementById("prevBtn").style.display = "none";
     </script>
     <script>
       const menuIcon = document.getElementById("menuIcon");
